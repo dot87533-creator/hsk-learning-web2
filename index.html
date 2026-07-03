@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSK Master — Học tiếng Trung HSK 1-9 hiện đại</title>
+<meta name="description" content="Nền tảng học tiếng Trung HSK 1 đến HSK 7-9: từ vựng, ngữ pháp, luyện nghe, theo dõi tiến trình, XP, huy hiệu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260702">
+</head>
+<body>
+<!-- Page loader hiện khi trang vừa tải -->
+<div class="page-loader" aria-hidden="true">
+  <div class="brush-spinner"></div>
+  <span class="muted" style="font-size:.85rem">Đang chuẩn bị bài học…</span>
+</div>
+
+<a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="seal-mark">汉</span> HSK Master</a>
+
+    <nav aria-label="Điều hướng chính">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="dashboard.html">Lộ trình HSK</a></li>
+        <li><a href="dashboard.html">Bảng điều khiển</a></li>
+        <li><a href="dictionary.html">Từ điển</a></li>
+        <li><a href="writing.html">Luyện viết</a></li>
+        <li><a href="reading.html">Luyện đọc</a></li>
+        <li><a href="#faq-section">Hỏi đáp</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="search" placeholder="Tra từ điển: Hán tự, Pinyin, nghĩa…" data-search-input aria-label="Tra từ điển">
+      </div>
+
+      <button class="theme-toggle" data-theme-toggle aria-label="Đổi giao diện sáng / tối">
+        <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+
+      <!-- Khách: nút đăng nhập/đăng ký -->
+      <div data-guest-only class="flex gap-sm">
+        <a href="login.html" class="btn btn-ghost btn-sm">Đăng nhập</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Đăng ký miễn phí</a>
+      </div>
+
+      <!-- Đã đăng nhập: avatar + menu -->
+      <div data-auth-only class="user-menu hidden">
+        <button class="avatar" data-user-menu-trigger aria-label="Mở menu tài khoản" data-user-avatar>H</button>
+        <div class="user-menu-panel">
+          <div style="padding:10px 12px;">
+            <div style="font-weight:700;font-size:.88rem" data-user-name>Học viên</div>
+            <div class="muted" style="font-size:.74rem" data-user-email>email@vidu.com</div>
+          </div>
+          <hr>
+          <a href="dashboard.html">📊 Bảng điều khiển</a>
+          <a href="profile.html">👤 Hồ sơ cá nhân</a>
+          <a href="settings.html">⚙️ Cài đặt</a>
+          <hr>
+          <button data-logout>🚪 Đăng xuất</button>
+        </div>
+      </div>
+
+      <button class="nav-burger" data-nav-burger aria-label="Mở menu điều hướng"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" data-nav-overlay></div>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">汉语水平考试 · Hanyu Shuiping Kaoshi</p>
+        <h1 class="hero-title">Chinh phục <span class="accent">HSK 1 – 9</span><br>theo lộ trình của riêng bạn</h1>
+        <p style="font-size:1.05rem;max-width:480px">Học từ vựng, ngữ pháp và kỹ năng nghe nói qua một hệ thống theo dõi tiến trình chi tiết: XP, chuỗi ngày học, huy hiệu và báo cáo trực quan — như một quyển nhật ký luyện chữ hiện đại.</p>
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-primary">Bắt đầu học miễn phí</a>
+          <a href="dashboard.html" class="btn btn-soft">Xem demo bảng điều khiển</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>11.000+</b><span>từ vựng HSK 1–9</span></div>
+          <div class="hero-stat"><b>7</b><span>cấp độ đầy đủ</span></div>
+          <div class="hero-stat"><b>32.000+</b><span>học viên đang luyện tập</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="ink-circle">
+          <span class="ink-char">学</span>
+          <div class="floating-chip">🔥 Chuỗi 18 ngày</div>
+          <div class="floating-chip">⭐ Level 12 · 3.260 XP</div>
+          <div class="floating-chip">✅ 1.342 từ đã thuộc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BREADCRUMB ví dụ (ẩn ở trang chủ, hiển thị demo) ============ -->
+
+  <!-- ============ HSK LEVELS ============ -->
+  <section class="section" id="levels">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Lộ trình</p>
+        <h2>Đầy đủ 7 cấp độ HSK</h2>
+        <p>Từ người mới bắt đầu đến trình độ học thuật HSK 7-9, mỗi cấp độ đều có lộ trình từ vựng, ngữ pháp và bài luyện tập riêng.</p>
+      </div>
+      <div class="level-grid" id="levelGrid"><!-- JS render --></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section" style="background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Tính năng</p>
+        <h2>Một hệ sinh thái học tập đầy đủ</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M12 12L3 7l9-5 9 5-9 5z"/></svg></div>
+          <h3 style="font-size:1.05rem">Lộ trình theo cấp độ</h3>
+          <p>Theo dõi % hoàn thành từng HSK, từ HSK1 đến HSK7-9, với gợi ý bài học tiếp theo phù hợp.</p>
+        </div>
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></div>
+          <h3 style="font-size:1.05rem">XP, Level & Huy hiệu</h3>
+          <p>Mỗi buổi học mang về điểm kinh nghiệm, lên cấp và mở khoá thành tích để duy trì động lực mỗi ngày.</p>
+        </div>
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <h3 style="font-size:1.05rem">Báo cáo trực quan</h3>
+          <p>Heatmap học tập, biểu đồ tiến bộ và thời gian học giúp bạn nhìn rõ hành trình của mình.</p>
+        </div>
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3 style="font-size:1.05rem">Mục tiêu cá nhân</h3>
+          <p>Đặt mục tiêu theo ngày, tuần, tháng và nhận thông báo nhắc nhở để giữ chuỗi học liên tục.</p>
+        </div>
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 style="font-size:1.05rem">Nhật ký học tập</h3>
+          <p>Ghi lại lịch sử mỗi phiên học: thời lượng, điểm số, kỹ năng luyện tập theo thời gian thực.</p>
+        </div>
+        <div class="card card-pad hoverable">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3 style="font-size:1.05rem">Phân tích kỹ năng</h3>
+          <p>Nhận diện kỹ năng mạnh — yếu (nghe, nói, đọc, viết) để tập trung ôn luyện đúng trọng tâm.</p>
+        </div>
+
+        <a href="dictionary.html" class="card card-pad hoverable" style="display:block">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <h3 style="font-size:1.05rem">Từ điển tiếng Trung <span class="tag good" style="font-size:.62rem;padding:2px 8px">Mới</span></h3>
+          <p>Tra Hán tự, Pinyin, nghĩa — kết hợp kho từ vựng HSK và cơ sở dữ liệu CC-CEDICT hơn 120.000 mục từ.</p>
+        </a>
+
+        <a href="writing.html" class="card card-pad hoverable" style="display:block">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+          <h3 style="font-size:1.05rem">Luyện viết chữ Hán <span class="tag good" style="font-size:.62rem;padding:2px 8px">Mới</span></h3>
+          <p>Xem hoạt ảnh thứ tự nét chuẩn, rồi tự vẽ trên canvas với chấm điểm nét tự động.</p>
+        </a>
+
+        <a href="reading.html" class="card card-pad hoverable" style="display:block">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+          <h3 style="font-size:1.05rem">Luyện đọc hiểu <span class="tag good" style="font-size:.62rem;padding:2px 8px">Mới</span></h3>
+          <p>Bài đọc theo cấp độ với pinyin, dịch nghĩa từng từ, phát âm và câu hỏi trắc nghiệm.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq-section">
+    <div class="container" style="max-width:760px">
+      <div class="section-head center"><p class="eyebrow">Hỏi đáp</p><h2>Câu hỏi thường gặp</h2></div>
+      <div id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="background:linear-gradient(120deg, var(--ink), #3a2f22); padding:60px 40px; border-radius:28px; text-align:center; position:relative; overflow:hidden;">
+        <span class="ink-char" style="position:absolute;left:-20px;top:-30px;font-size:10rem;color:rgba(255,255,255,.06)">慧</span>
+        <h2 style="color:#fff;position:relative">Sẵn sàng bắt đầu hành trình HSK?</h2>
+        <p style="color:rgba(246,241,231,.7);max-width:420px;margin:0 auto 24px;position:relative">Tạo tài khoản miễn phí và nhận lộ trình học cá nhân hoá ngay hôm nay.</p>
+        <a href="register.html" class="btn btn-primary" style="position:relative">Đăng ký ngay — miễn phí</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom:12px"><span class="seal-mark">汉</span> HSK Master</a>
+        <p style="font-size:.86rem">Nền tảng học tiếng Trung HSK toàn diện — từ HSK 1 đến HSK 7-9.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="Email">@</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Học tập</h4>
+        <a href="dashboard.html">Bảng điều khiển</a><a href="index.html#levels">Các cấp độ HSK</a><a href="profile.html">Hồ sơ học tập</a>
+      </div>
+      <div class="footer-col"><h4>Tài khoản</h4>
+        <a href="login.html">Đăng nhập</a><a href="register.html">Đăng ký</a><a href="settings.html">Cài đặt</a>
+      </div>
+      <div class="footer-col"><h4>Hỗ trợ</h4>
+        <a href="#faq-section">Câu hỏi thường gặp</a><a href="#">Liên hệ</a><a href="#">Điều khoản sử dụng</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HSK Master. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế chủ đề "Mực &amp; Giấy" 🖋️</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js?v=20260702"></script>
+<script src="js/vocabulary-data.js?v=20260702"></script>
+<script src="js/tts.js?v=20260702"></script>
+<script src="js/vocab-state.js?v=20260702"></script>
+<script src="js/home.js?v=20260702"></script>
+</body>
+</html>
